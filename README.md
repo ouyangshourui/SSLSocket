@@ -43,6 +43,10 @@ git clone https://github.com/why429/SSLSocket.git
   ```
   keytool -import -alias sslclient -keystore sslservertrust -file sslclient.cer 
   ```
+  Export server keystore as certification
+  ```
+  keytool -export -alias sslserver -keystore sslserverkeys -file sslserver.cer
+  ```
   Import server's certification into client's truststore
   ```
   keytool -import -alias sslserver -keystore sslclienttrust -file sslserver.cer 
